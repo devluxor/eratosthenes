@@ -1,0 +1,27 @@
+{
+  "name": "project01-backend",
+  "version": "1.0.0",
+  "description": "Full Stack Project 01 for Capstone 2401",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucsorr/2401-full-stack-project01.git"
+  },
+  "author": "Lucas Sorribes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucsorr/2401-full-stack-project01/issues"
+  },
+  "homepage": "https://github.com/lucsorr/2401-full-stack-project01#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.4",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

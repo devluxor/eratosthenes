@@ -1,6 +1,6 @@
 export const MOCKmedianOfPrimes = async (n) => {
   if (n < 2) return 0
-
+  // memoization!!
   const result = await erathosthenes(n)
   return result
 }
@@ -32,6 +32,6 @@ const erathosthenes = async (n) => {
       output.push(i)
     }
   }
-  
+
   return output
 }
