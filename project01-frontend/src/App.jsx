@@ -2,18 +2,20 @@ import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { MOCKmedianOfPrimes } from './services/mockAPI'
+import { medianOfPrimes } from './services/api'
+import { numberFormatter } from './utils/helpers'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [result, setResult] = useState(null)
+  const [count, setCount] = useState(1000000)
+  const [result, setResult] = useState([])
 
   useEffect(() => {
     (async () => {
-      const n = await MOCKmedianOfPrimes(count)
+      const n = await medianOfPrimes(count)
       setResult(n)
     })()
   }, [count])
+
 
   return (
     <>
@@ -32,7 +34,7 @@ function App() {
         </button>
         <h2>Result: </h2>
         <p>
-          {result}
+          {numberFormatter(result)}
         </p>
       </div>
       <p className="read-the-docs">
