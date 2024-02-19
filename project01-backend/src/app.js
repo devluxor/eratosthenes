@@ -1,14 +1,11 @@
 import 'dotenv/config';
-import cors from 'cors';
 import express from 'express';
 
-import erathosthes from './controllers/erathosthes'
+import eratosthenes from './controllers/eratosthenes'
 
 const app = express();
 
-app.use(cors());
-
-app.use('/api/erathosthes', erathosthes)
+app.use('/api/eratosthenes', eratosthenes)
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
