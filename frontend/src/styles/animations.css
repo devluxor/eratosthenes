@@ -28,13 +28,13 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .sphere0-primes {
-    animation: sphere-spin infinite 80s linear;
+    animation: sphere-spin infinite 60s linear;
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .sphere0b-median {
-    animation: sphere-spin-median infinite 30s linear;
+    animation: sphere-spin-median infinite 25s linear;
   }
 }
 
