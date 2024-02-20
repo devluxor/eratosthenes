@@ -1,7 +1,7 @@
 import { Router } from 'express'
 
 import { median } from './helpers'
-import { primesGenerator } from './primesGenerator'
+import { primesGenerator } from './primesAndMedianGenerator'
 import { error } from '../utils/logger'
 
 const router = Router()

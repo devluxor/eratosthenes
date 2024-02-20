@@ -1,4 +1,4 @@
-export const primesGenerator = async (n) => {
+export const primesAndMedianGenerator = async (n) => {
   const primes = function* primes() {
     yield 2; yield 3; yield 5; yield 7;
   
