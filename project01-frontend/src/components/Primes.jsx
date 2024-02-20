@@ -2,7 +2,7 @@
 import { primesFormatter } from "../utils/helpers"
 
 const Primes = ({primes}) => {
-  // if (!primes) return
+  if (primes.length < 1) return
 
   return (
       <svg className={'sphere sphere0-primes'} viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">

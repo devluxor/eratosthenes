@@ -29,12 +29,12 @@ function App() {
         (withMedian === '' || withMedian === 'median')
 
       if (!areValidPaths) {
-        navigate(validNumber ? `/${number}` : '/')
         const errorMessage = validNumber ? 
-          'Invalid URL path parameters: ' :
-          `Invalid number: ${number}`
-
+        'Invalid URL path parameters: ' :
+        `Invalid number: ${number}`
+        
         console.error(errorMessage, urlMatch.params)
+        navigate(validNumber ? `/${number}` : '/')
         return
       }
 
