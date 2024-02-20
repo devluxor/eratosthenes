@@ -1,6 +1,5 @@
 const WHITESPACE = '\u00A0'
 const MAX_LENGTH = 23
-const MEDIAN_SPACE = 6
 
 export const numberFormatter = (numbers) => {
   return numbers.join(', ')
@@ -12,7 +11,6 @@ export const primesFormatter = (primes) => {
   
   const spaces = MAX_LENGTH - length
   const inBetween = WHITESPACE.repeat(spaces)
-  console.log(primes.map(p => `·${p}·`).join(inBetween))
   return primes.map(p => `·${p}·`).join(inBetween)
 }
 

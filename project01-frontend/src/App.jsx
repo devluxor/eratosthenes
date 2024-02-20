@@ -6,6 +6,8 @@ import { useMatch, useNavigate } from 'react-router-dom'
 import PlotinusSkull from './components/PlotinusSkull'
 import Flare from './components/Flare'
 
+const MAX_NUMBER = 9999999
+
 function App() {
   const [primes, setPrimes] = useState([])
   const [median, setMedian] = useState([])
@@ -17,12 +19,20 @@ function App() {
       if (!urlMatch) return
 
       const {number, ['*']: withMedian} = urlMatch.params
-      const validNumber = number.match(/^\d+$/)
-      const areValidPaths = validNumber && (withMedian === '' || withMedian === 'median')
+      const validNumber = number.match(/^\d+$/) && 
+        Number(number) > 1 && 
+        Number(number) < MAX_NUMBER
+
+      const areValidPaths = validNumber && 
+        (withMedian === '' || withMedian === 'median')
 
       if (!areValidPaths) {
         navigate(validNumber ? `/${number}` : '/')
-        console.error('Invalid URL path: ', urlMatch.params)
+        const errorMessage = validNumber ? 
+          'Invalid URL path parameters: ' :
+          `Invalid number: ${number}`
+
+        console.error(errorMessage, urlMatch.params)
         return
       }
 

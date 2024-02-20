@@ -12,6 +12,11 @@ const MAX_NUMBER = 9999999
 router.get('/:n', inputValidator, async (req, res) => {
   const n = Number(req.params.n)
 
+  if (n <= 1) {
+    res.status(400).send(`Number ${n} is too small!`)
+    return
+  }
+
   if (n >= MAX_NUMBER) {
     res.status(400).send(`Number ${n} is too big!`)
     return
