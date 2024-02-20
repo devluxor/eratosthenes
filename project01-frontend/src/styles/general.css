@@ -1,6 +1,7 @@
 :root {
   --background:black;
   --standard-font: wheat;
+  --hidden-font:rgb(112, 89, 68);
   --vertical-font:rgb(172, 150, 122);
 }
 

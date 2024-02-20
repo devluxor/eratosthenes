@@ -4,12 +4,18 @@
   position: sticky;
   font-size: 0.53rem;
   margin-left: -395px;
-  color:var(--vertical-font);
+  color:var(--hidden-font);
   margin-top: -15px;
   left: 1230px;
   min-width: min-content;
   white-space: nowrap;
   font-family: 'Courier New', Courier, monospace;
+  z-index: 999;
+}
+
+.vertical:hover {
+  cursor: pointer;
+  color: var(--vertical-font)
 }
 
 @media (max-width: 700px) {
