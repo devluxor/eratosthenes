@@ -1,8 +1,4 @@
-import { MAX_NUMBER } from "./variables"
-
-const WHITESPACE = '\u00A0'
-const MAX_LENGTH = 23
-
+import { MAX_NUMBER, MAX_LENGTH, WHITESPACE } from "./variables"
 
 export const numberFormatter = (numbers) => {
   return numbers.join(', ')

@@ -20,6 +20,12 @@
 
 @media (max-width: 700px) {
   .vertical {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    writing-mode: vertical-rl;
+    top: 0px;
+    left: 0px;
+    margin: 5px;
+    font-size: 1.9rem;
   }
 } 
