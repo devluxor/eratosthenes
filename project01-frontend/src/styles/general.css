@@ -22,6 +22,7 @@ body {
   position: absolute;
   margin-left: -550px;
   margin-top: -530px;
+  z-index: 9;
 }
 
 

@@ -29,13 +29,13 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .sphere0-primes {
-    animation: sphere-spin infinite 50s linear;
+    animation: sphere-spin infinite 40s linear;
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .sphere0b-median {
-    animation: sphere-spin infinite 15s linear;
+    animation: sphere-spin infinite 100s linear;
   }
 }
 
@@ -60,26 +60,20 @@
 
 .sphere3 {
   height: 35rem;
-  /* filter: invert(6%) sepia(42%) saturate(650%) hue-rotate(347deg) brightness(200%) contrast(100%); */
+
   z-index: 7;
 }
 
 .sphere2 {
   height: 50rem;
-  /* margin-left: 150px; */
-  /* display: none; */
+
   z-index: 8;
-  /* filter: invert(6%) sepia(42%) saturate(650%) hue-rotate(347deg) brightness(140%) contrast(100%); */
+
 }
 
 .sphere1 {
   height: 70rem;  
-  /* margin-top: 7%; */
-  /* margin-left: 20%;  */
-  /* margin-left: */
-  /* filter: invert(54%) sepia(47%) saturate(5767%) hue-rotate(164deg) brightness(98%) contrast(101%); */
-  /* filter: invert(58%) sepia(12%) saturate(2474%) hue-rotate(56deg) brightness(113%) contrast(82%); */
-  /* filter: invert(22%) sepia(62%) saturate(650%) hue-rotate(347deg) brightness(60%) contrast(60%); */
+
   z-index: 9;
 }
 

@@ -11,7 +11,7 @@ const Primes = ({primes}) => {
           fill="none"
           // stroke='#fff'
           d="M 32.550491,148.48008 A -108.15144,-108.15144 0 0 1 140.70194,40.328644 -108.15144,-108.15144 0 0 1 248.85338,148.48008 -108.15144,-108.15144 0 0 1 140.70194,256.63153 -108.15144,-108.15144 0 0 1 32.550491,148.48008 Z" />  
-        <text fontSize="19" fill="#000" letterSpacing="2" fontFamily="serif" fontWeight="normal">
+        <text fontSize="19" fill="#241904" letterSpacing="2" fontFamily="serif" fontWeight="normal">
         <textPath
           xlinkHref="#SunCatcherStudio"
           side="left" 

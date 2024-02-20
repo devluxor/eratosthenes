@@ -1,21 +1,40 @@
+const WHITESPACE = '\u00A0'
+const MAX_LENGTH = 23
+const MEDIAN_SPACE = 6
+
 export const numberFormatter = (numbers) => {
   return numbers.join(', ')
 }
 
 export const primesFormatter = (primes) => {
   const length = primes.length
-  if (length > 100) return `·${primes.slice(0, 98).join('·')}·`
+  if (length > MAX_LENGTH) return `·${generateRandom(primes).join('·')}...`
   
-  const spaces = 120 - length
-  const inBetween = String.fromCharCode(160).repeat(spaces)
+  const spaces = MAX_LENGTH - length
+  const inBetween = WHITESPACE.repeat(spaces)
+  console.log(primes.map(p => `·${p}·`).join(inBetween))
   return primes.map(p => `·${p}·`).join(inBetween)
+}
+
+const generateRandom = (arr) => {
+  let n = MAX_LENGTH
+  let result = new Array(n)
+  let len = arr.length
+  let taken = new Array(len)
+
+  while (n--) {
+    let x = Math.floor(Math.random() * len)
+    result[n] = arr[x in taken ? taken[x] : x]
+    taken[x] = --len in taken ? taken[len] : len
+  }
+  
+  return result;
 }
 
 export const medianFormatter = (median) => {
   if (median.length > 1){
-    const inBetween =  String.fromCharCode(160).repeat(20)
-    return `${median[0]}${inBetween}${median[1]}${inBetween}`
+    return `x͂${median[0]}; ${median[1]}`
   }
 
-  return median.join('·')
+  return `x͂${median[0]}`
 }

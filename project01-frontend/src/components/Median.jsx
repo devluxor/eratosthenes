@@ -2,7 +2,7 @@
 import { medianFormatter } from "../utils/helpers"
 
 const Median = ({median}) => {
-  if (!median) return
+  if (median.length < 1) return
 
   return (
     <svg className={'sphere sphere0b-median'} viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">

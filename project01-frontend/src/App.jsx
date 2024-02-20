@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { primesAndMedian } from './services/api'
 import Spheres from './components/Spheres'
-import { useLocation } from 'react-router-dom'
+import { useMatch, useNavigate } from 'react-router-dom'
 
 import PlotinusSkull from './components/PlotinusSkull'
 import Flare from './components/Flare'
@@ -9,22 +9,32 @@ import Flare from './components/Flare'
 function App() {
   const [primes, setPrimes] = useState([])
   const [median, setMedian] = useState([])
-  const location = useLocation()
-
+  const urlMatch = useMatch('/:number/*')
+  const navigate = useNavigate()
+  
   useEffect(() => {
     (async () => {
-      const path = location.pathname
-      const numberPath = path.match(/\d+/)[0]
-      const withMedian = path.match(/\/median$/)
+      if (!urlMatch) return
+      
+      const {number, ['*']: withMedian} = urlMatch.params
+      const validNumber = number.match(/^\d+$/)
+      const areValidPaths = validNumber && (withMedian === '' || withMedian === 'median')
+
+      if (!areValidPaths) {
+        navigate(validNumber ? `/${number}` : '/')
+        console.error('Invalid URL path: ', urlMatch.params)
+        return
+      }
+
       try {
-        const result = await primesAndMedian(numberPath)
+        const result = await primesAndMedian(number)
         setPrimes(result.primes)
         if (withMedian) setMedian(result.median)
       } catch(e) {
         console.error(e)
       }
     })()
-  }, [location])
+  }, [urlMatch, navigate])
 
   return (
     <>
@@ -55,7 +65,6 @@ function App() {
         */}
       <Flare/>
       <Spheres
-        n={location.pathname.match(/\d+/)[0]}
         primes={primes}
         median={median}
       />

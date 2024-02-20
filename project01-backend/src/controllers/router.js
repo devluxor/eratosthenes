@@ -1,13 +1,12 @@
 import { Router } from 'express'
 
 import { median } from './helpers'
-import { primesGenerator } from './primesAndMedianGenerator'
+import { primesGenerator } from './primesGenerator'
 import { error } from '../utils/logger'
 
 const router = Router()
 
 router.get('/:n', async (req, res) => {
-  // TODO add validation
 
   const n = Number(req.params.n)
   try {
