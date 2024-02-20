@@ -1,16 +1,4 @@
-import { useNavigate } from 'react-router-dom'
-import { MAX_NUMBER } from '../utils/variables'
-
-const PlotinusSkull = ({setPrimes, setMedian}) => {
-  const navigate = useNavigate()
-
-  const goToRandomNumber = () => {
-    setMedian([])
-    setPrimes([])
-    const number = Math.floor(Math.random() * MAX_NUMBER)
-    navigate(`/${number}/median`)
-  } 
-
+const PlotinusSkull = ({goToRandomNumber}) => {
   return (
     <p 
       className='vertical'

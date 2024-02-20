@@ -1,5 +1,8 @@
+import { MAX_NUMBER } from "./variables"
+
 const WHITESPACE = '\u00A0'
 const MAX_LENGTH = 23
+
 
 export const numberFormatter = (numbers) => {
   return numbers.join(', ')
@@ -35,4 +38,8 @@ export const medianFormatter = (median) => {
   }
 
   return `x͂${median[0]}`
+}
+
+export const randomNumber = () => {
+  return Math.floor(Math.random() * MAX_NUMBER)
 }

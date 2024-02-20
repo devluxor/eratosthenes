@@ -31,20 +31,20 @@
     transform: rotate(-165deg);
   }
   to {
-    transform: rotate(180deg);
+    transform: rotate(140deg);
   }
 }
 
 
 @media (prefers-reduced-motion: no-preference) {
   .sphere0-primes {
-    animation: sphere-spin infinite 40s linear;
+    animation: sphere-spin infinite 80s linear;
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .sphere0b-median {
-    animation: sphere-spin-median infinite 20s linear;
+    animation: sphere-spin-median infinite 30s linear;
   }
 }
 
@@ -56,13 +56,13 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .sphere2 {
-    animation: sphere-spin infinite 140s linear;
+    animation: sphere-spin infinite 160s linear;
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .sphere3 {
-    animation: sphere-spin infinite 190s linear;
+    animation: sphere-spin infinite 200s linear;
   }
 }
 

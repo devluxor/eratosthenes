@@ -25,4 +25,16 @@ body {
   z-index: 9;
 }
 
+.button {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  top: 90px;
+  left: 490px;
+  z-index: 100;
+}
+
+.button:hover {
+  cursor: pointer;
+}
 

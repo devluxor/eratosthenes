@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react'
 import { primesAndMedian } from './services/api'
 import Spheres from './components/Spheres'
 import { useMatch, useNavigate } from 'react-router-dom'
+import { randomNumber } from './utils/helpers'
 
 import PlotinusSkull from './components/PlotinusSkull'
 import Flare from './components/Flare'
 
 import { MAX_NUMBER } from './utils/variables'
+import Button from './components/Button'
 
 function App() {
   const [primes, setPrimes] = useState([])
@@ -47,9 +49,15 @@ function App() {
     })()
   }, [urlMatch, navigate])
 
+  const goToRandomNumber = () => {
+    setMedian([])
+    setPrimes([])
+    navigate(`/${randomNumber()}/median`)
+  } 
+
   return (
     <>
-      <PlotinusSkull setMedian={setMedian} setPrimes={setPrimes}/>       
+      <PlotinusSkull goToRandomNumber={goToRandomNumber}/>       
         {/* 
         
 
@@ -79,6 +87,7 @@ function App() {
         primes={primes}
         median={median}
       />
+      <Button goToRandomNumber={goToRandomNumber} />
     </>
   )
 }
