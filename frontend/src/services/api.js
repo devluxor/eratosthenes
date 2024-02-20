@@ -1,5 +1,6 @@
 import axios from "axios"
-const BASE_URL = 'http://localhost:3199/api/eratosthenes/'
+const PORT = import.meta.env.PORT
+const BASE_URL = `http://localhost:${PORT}/api/eratosthenes/`
 
 export const primesAndMedian = async (n) => {
   if (n <= 2) return []
