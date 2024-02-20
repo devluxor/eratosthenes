@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     (async () => {
       if (!urlMatch) return
-      
+
       const {number, ['*']: withMedian} = urlMatch.params
       const validNumber = number.match(/^\d+$/)
       const areValidPaths = validNumber && (withMedian === '' || withMedian === 'median')
@@ -28,6 +28,7 @@ function App() {
 
       try {
         const result = await primesAndMedian(number)
+        if (!result) return
         setPrimes(result.primes)
         if (withMedian) setMedian(result.median)
       } catch(e) {

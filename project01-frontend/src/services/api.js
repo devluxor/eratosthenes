@@ -8,6 +8,6 @@ export const primesAndMedian = async (n) => {
     const result = await axios.get(`${BASE_URL}${n}`)
     return result.data
   } catch(e) {
-    console.error(e)
+    return
   }
 }
