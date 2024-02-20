@@ -7,14 +7,14 @@ export const numberFormatter = (numbers) => {
 
 export const primesFormatter = (primes) => {
   const length = primes.length
-  if (length > MAX_LENGTH) return `·${generateRandom(primes).join('·')}...`
+  if (length > MAX_LENGTH) return `·${getRandom(primes).join('·')}...`
   
   const spaces = MAX_LENGTH - length
   const inBetween = WHITESPACE.repeat(spaces)
   return primes.map(p => `·${p}·`).join(inBetween)
 }
 
-const generateRandom = (arr) => {
+const getRandom = (arr) => {
   let n = MAX_LENGTH
   let result = new Array(n)
   let len = arr.length

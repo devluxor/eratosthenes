@@ -7,7 +7,7 @@ import { inputValidator } from '../utils/middleware'
 
 const router = Router()
 
-const MAX_NUMBER = 9999999
+const MAX_NUMBER = 9_999_999
 
 router.get('/:n', inputValidator, async (req, res) => {
   const n = Number(req.params.n)

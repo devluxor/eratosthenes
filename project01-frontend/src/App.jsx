@@ -6,7 +6,7 @@ import { useMatch, useNavigate } from 'react-router-dom'
 import PlotinusSkull from './components/PlotinusSkull'
 import Flare from './components/Flare'
 
-const MAX_NUMBER = 9999999
+import { MAX_NUMBER } from './utils/variables'
 
 function App() {
   const [primes, setPrimes] = useState([])
@@ -49,7 +49,7 @@ function App() {
 
   return (
     <>
-      <PlotinusSkull/>       
+      <PlotinusSkull setMedian={setMedian} setPrimes={setPrimes}/>       
         {/* 
         
 

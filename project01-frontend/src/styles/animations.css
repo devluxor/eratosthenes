@@ -26,6 +26,15 @@
   }
 }
 
+@keyframes sphere-spin-median {
+  from {
+    transform: rotate(-165deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .sphere0-primes {
@@ -35,7 +44,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .sphere0b-median {
-    animation: sphere-spin infinite 100s linear;
+    animation: sphere-spin-median infinite 20s linear;
   }
 }
 
