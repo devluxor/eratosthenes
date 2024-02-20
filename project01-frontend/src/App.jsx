@@ -1,45 +1,64 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { medianOfPrimes } from './services/api'
-import { numberFormatter } from './utils/helpers'
+import { primesAndMedian } from './services/api'
+import Spheres from './components/Spheres'
+import { useLocation } from 'react-router-dom'
+
+import PlotinusSkull from './components/PlotinusSkull'
+import Flare from './components/Flare'
 
 function App() {
-  const [count, setCount] = useState(1000000)
-  const [result, setResult] = useState([])
+  const [primes, setPrimes] = useState([])
+  const [median, setMedian] = useState([])
+  const location = useLocation()
 
   useEffect(() => {
     (async () => {
-      const n = await medianOfPrimes(count)
-      setResult(n)
+      const path = location.pathname
+      const numberPath = path.match(/\d+/)[0]
+      const withMedian = path.match(/\/median$/)
+      try {
+        const result = await primesAndMedian(numberPath)
+        setPrimes(result.primes)
+        if (withMedian) setMedian(result.median)
+      } catch(e) {
+        console.error(e)
+      }
     })()
-  }, [count])
-
+  }, [location])
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <h2>Result: </h2>
-        <p>
-          {numberFormatter(result)}
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <PlotinusSkull/>       
+        {/* 
+        
+
+
+
+
+
+        
+        Never stop sculpting your own statue: 
+        contemplate the immediate simplicity of the Forms; 
+        try to bring back the god in you 
+        to the divine in all
+        to flee alone, towards the solitary one. 
+        
+
+
+
+
+
+
+
+
+
+        */}
+      <Flare/>
+      <Spheres
+        n={location.pathname.match(/\d+/)[0]}
+        primes={primes}
+        median={median}
+      />
     </>
   )
 }

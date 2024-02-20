@@ -1,0 +1,99 @@
+.spheres {
+  position: absolute;
+  /* z-index: -2; */
+  /* height: 80vh; */
+  /* height: 100%; */
+  /* margin-top: 10%; */
+}
+
+.sphere {
+  /* height: 40em; */
+  /* padding: 1.5em; */
+  will-change: filter;
+  transition: filter 300ms;
+  position: absolute;
+  /* top: 10px; */
+  /* z-index: -100; */
+
+}
+
+@keyframes sphere-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .sphere0-primes {
+    animation: sphere-spin infinite 50s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sphere0b-median {
+    animation: sphere-spin infinite 15s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sphere1 {
+    animation: sphere-spin infinite 100s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sphere2 {
+    animation: sphere-spin infinite 140s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sphere3 {
+    animation: sphere-spin infinite 190s linear;
+  }
+}
+
+
+.sphere3 {
+  height: 35rem;
+  /* filter: invert(6%) sepia(42%) saturate(650%) hue-rotate(347deg) brightness(200%) contrast(100%); */
+  z-index: 7;
+}
+
+.sphere2 {
+  height: 50rem;
+  /* margin-left: 150px; */
+  /* display: none; */
+  z-index: 8;
+  /* filter: invert(6%) sepia(42%) saturate(650%) hue-rotate(347deg) brightness(140%) contrast(100%); */
+}
+
+.sphere1 {
+  height: 70rem;  
+  /* margin-top: 7%; */
+  /* margin-left: 20%;  */
+  /* margin-left: */
+  /* filter: invert(54%) sepia(47%) saturate(5767%) hue-rotate(164deg) brightness(98%) contrast(101%); */
+  /* filter: invert(58%) sepia(12%) saturate(2474%) hue-rotate(56deg) brightness(113%) contrast(82%); */
+  /* filter: invert(22%) sepia(62%) saturate(650%) hue-rotate(347deg) brightness(60%) contrast(60%); */
+  z-index: 9;
+}
+
+svg.sphere0-primes {
+  height: 85rem;
+  margin-top: 10vh;
+  margin-left: 4vw;
+  z-index: 10;
+  /* filter: invert(22%) sepia(62%) saturate(650%) hue-rotate(347deg) brightness(60%) contrast(60%); */
+}
+
+svg.sphere0b-median {
+  margin-top: 30vh;
+  margin-left: 13vw;
+  height: 90rem;
+  z-index: 11;
+}

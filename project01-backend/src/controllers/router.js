@@ -2,7 +2,7 @@ import { Router } from 'express'
 
 import { median } from './helpers'
 import { primesGenerator } from './primesGenerator'
-import { logger } from '../utils/logger'
+import { error } from '../utils/logger'
 
 const router = Router()
 
@@ -13,9 +13,9 @@ router.get('/:n', async (req, res) => {
   try {
     const primes = await primesGenerator(n)
     const result = median(primes)
-    res.json(result)
+    res.json({primes, median: result})
   } catch (e) {
-    logger.error('Error: ', e)
+    error('Error: ', e)
     res.status(400).send(e)
   }
 })

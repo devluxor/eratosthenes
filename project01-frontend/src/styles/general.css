@@ -1,0 +1,26 @@
+:root {
+  --background:black;
+  --standard-font: wheat;
+  --vertical-font:rgb(172, 150, 122);
+}
+
+body {
+  background-color: var(--background);
+  background: url(../assets/planet.jpg) 0 -203% repeat;
+  color: var(--standard-font);
+  overflow: hidden;
+  padding: 20px;
+  padding-left: 400px;
+}
+
+#root {
+  display: flex;
+}
+
+.flare {
+  position: absolute;
+  margin-left: -550px;
+  margin-top: -530px;
+}
+
+
