@@ -2,11 +2,11 @@
   "name": "project01-backend",
   "version": "1.0.0",
   "description": "Full Stack Project 01 for Capstone 2401",
-  "main": "../index.js",
+  "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "rm -rf dist && cd ../project01-frontend && npm run build && cp -r dist ../project01-backend"
+    "build:ui": "rm -rf dist && cd ../frontend && npm run build && cp -r dist ../backend"
   },
   "repository": {
     "type": "git",

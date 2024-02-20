@@ -1,13 +1,22 @@
-import 'dotenv/config';
-import express from 'express';
+import 'dotenv/config'
+import express from 'express'
 import cors from 'cors'
 import router from './controllers/router'
 import { unknownEndpoint } from './utils/middleware'
 
 const app = express();
 app.use(cors())
+app.use(express.static('dist'));
 
 app.use('/api/eratosthenes', router)
+
+app.get('/', (req, res) => {
+  res.send('Fugere solus ad solitarium unum')
+})
+
+app.get('/:n/:m', (req, res) => {
+  res.redirect('/')
+})
 
 app.use('*', unknownEndpoint)
 
