@@ -15,7 +15,7 @@ function App() {
   const [median, setMedian] = useState([])
   const urlMatch = useMatch('/:number/*')
   const navigate = useNavigate()
-  
+  console.log(urlMatch)
   useEffect(() => {
     (async () => {
       if (!urlMatch) return

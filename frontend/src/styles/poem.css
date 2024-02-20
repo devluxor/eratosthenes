@@ -1,6 +1,6 @@
 @import url(./general.css);
 
-.vertical {
+.poem {
   position: sticky;
   font-size: 0.53rem;
   margin-left: -395px;
@@ -13,13 +13,17 @@
   z-index: 999;
 }
 
-.vertical:hover {
+.poem:hover {
   cursor: pointer;
-  color: var(--vertical-font)
+  color: var(--poem-font)
+}
+
+.poem-numbers {
+  color: var(--poem-font);
 }
 
 @media (max-width: 700px) {
-  .vertical {
+  .poem {
     /* display: none; */
     position: absolute;
     writing-mode: vertical-rl;

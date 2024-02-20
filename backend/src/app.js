@@ -14,7 +14,8 @@ app.get('/', (req, res) => {
   res.send('Fugere solus ad solitarium unum')
 })
 
-app.get('/:n/:m', (req, res) => {
+app.get('/:n/:m?', (req, res) => {
+  console.log(req)
   res.redirect('/')
 })
 
