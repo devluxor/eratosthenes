@@ -3,12 +3,20 @@ import { Router } from 'express'
 import { median } from './helpers'
 import { primesGenerator } from './primesGenerator'
 import { error } from '../utils/logger'
+import { inputValidator } from '../utils/middleware'
 
 const router = Router()
 
-router.get('/:n', async (req, res) => {
+const MAX_NUMBER = 9999999
 
+router.get('/:n', inputValidator, async (req, res) => {
   const n = Number(req.params.n)
+
+  if (n >= MAX_NUMBER) {
+    res.status(400).send(`Number ${n} is too big!`)
+    return
+  }
+
   try {
     const primes = await primesGenerator(n)
     const result = median(primes)

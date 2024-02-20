@@ -6,6 +6,7 @@ import { unknownEndpoint } from './utils/middleware'
 
 const app = express();
 app.use(cors())
+
 app.use('/api/eratosthenes', router)
 
 app.use('*', unknownEndpoint)
