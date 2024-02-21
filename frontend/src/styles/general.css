@@ -6,8 +6,8 @@
 }
 
 body {
+  background: url(../assets/planet.jpg) 0 3% no-repeat;
   background-color: var(--background);
-  background: url(../assets/planet.jpg) 0 3% repeat;
   color: var(--standard-font);
   overflow: hidden;
   padding: 20px;
