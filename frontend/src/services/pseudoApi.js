@@ -1,9 +1,3 @@
-// import axios from "axios"
-// const PORT = import.meta.env.VITE_PORT
-// const SERVER = import.meta.env.VITE_SERVER
-
-// const BASE_URL = `https://${SERVER}/api/eratosthenes/`
-
 import { primesGenerator } from "../utils/primesGenerator"
 import { median } from "../utils/helpers"
 import { MAX_NUMBER } from "../utils/variables"
