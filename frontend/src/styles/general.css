@@ -7,7 +7,7 @@
 
 body {
   background-color: var(--background);
-  background: url(../assets/planet.jpg) 0 -203% repeat;
+  background: url(../assets/planet.jpg) 0 3% repeat;
   color: var(--standard-font);
   overflow: hidden;
   padding: 20px;
