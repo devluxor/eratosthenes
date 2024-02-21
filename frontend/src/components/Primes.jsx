@@ -4,7 +4,7 @@ import { primesFormatter } from "../utils/helpers"
 
 const Primes = ({primes}) => {
   const urlMatch = useMatch('*')
-  primes = [15,5,5,5,5,5,555,344,2,34,42,34,75,7,442,4,3,3,3,42,2,234,]
+  
   return (
       <svg className={'sphere sphere0-primes'} viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
         <path 
