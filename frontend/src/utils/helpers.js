@@ -37,5 +37,5 @@ export const medianFormatter = (median) => {
 }
 
 export const randomNumber = () => {
-  return Math.floor(Math.random() * MAX_NUMBER)
+  return Math.floor(Math.random() * (MAX_NUMBER / 100))
 }
