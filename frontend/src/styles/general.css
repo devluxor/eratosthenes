@@ -5,6 +5,8 @@
   --poem-font:rgb(247, 237, 223);
 }
 
+
+
 body {
   background: url(../assets/planet.jpg) 0 3% no-repeat;
   background-color: var(--background);
@@ -12,6 +14,8 @@ body {
   overflow: hidden;
   padding: 20px;
   padding-left: 400px;
+  /* background-size: contain; */
+
 }
 
 #root {
@@ -57,14 +61,52 @@ body {
   body {
     background-position-x: 20%;
   }
-  .spheres {
-    left: -40px;
-    top:90px;
-  }
   .flare {
     left: -30px;
   }
   .button {
     left: 65px;
   }
-} 
+  .sphere3 {
+    max-width: 350px;
+    max-height: 350px;
+    top: 7vh;
+    left: 10vw;
+  }
+  .sphere2 {
+    max-width: 550px;
+    max-height: 550px;
+    top: 10vh;
+  }
+  .sphere1 {
+    max-width: 750px;
+    max-height: 750px;
+    top: 16vh;
+  }
+
+  .sphere0-primes {
+    max-width: 950px;
+    max-height: 950px;
+    top: 15vh;
+    left: -20vw;
+  }
+
+  .sphere0b-median {
+    left: -30vw;
+  }
+
+  @keyframes sphere-spin-median {
+    from {
+      transform: rotate(-45deg);
+    }
+    to {
+      transform: rotate(120deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .sphere0b-median {
+      animation: sphere-spin-median infinite 25s linear;
+    }
+  }
+}

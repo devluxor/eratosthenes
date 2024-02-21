@@ -2,6 +2,7 @@
 import { medianFormatter } from "../utils/helpers"
 
 const Median = ({median}) => {
+  median = [12555555555344234,42347574]
   if (median.length < 1) return
 
   return (
