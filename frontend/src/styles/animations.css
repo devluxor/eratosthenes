@@ -19,7 +19,7 @@
 
 @keyframes sphere-spin-median {
   from {
-    transform: rotate(-70deg);
+    transform: rotate(-120deg);
   }
   to {
     transform: rotate(130deg);
