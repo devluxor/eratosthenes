@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { primesAndMedian } from './services/api'
+import { primesAndMedian } from './services/pseudoApi'
 import Spheres from './components/Spheres'
 import { useMatch, useNavigate } from 'react-router-dom'
 import { randomNumber } from './utils/helpers'
@@ -9,6 +9,7 @@ import Flare from './components/Flare'
 
 import { MAX_NUMBER } from './utils/variables'
 import Button from './components/Button'
+import { error } from './utils/logger'
 
 function App() {
   const [primes, setPrimes] = useState([])
@@ -33,7 +34,7 @@ function App() {
         'Invalid URL path parameters: ' :
         `Invalid number: ${number}`
         
-        console.error(errorMessage, urlMatch.params)
+        error(errorMessage, urlMatch.params)
         navigate(validNumber ? `/${number}` : '/')
         return
       }
@@ -44,7 +45,7 @@ function App() {
         setPrimes(result.primes)
         if (withMedian) setMedian(result.median)
       } catch(e) {
-        console.error(e)
+        error(e)
       }
     })()
   }, [urlMatch, navigate])

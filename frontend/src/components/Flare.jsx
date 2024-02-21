@@ -1,4 +1,4 @@
-import flare from '../assets/flare.png'
+import flare from '../../public/flare.png'
 
 const Flare = () => {
   return (
