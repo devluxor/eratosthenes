@@ -8,7 +8,7 @@
 
 
 body {
-  background: url(../../public/planet.jpg) 0 3% no-repeat;
+  background: url(/planet.jpg) 0 3% no-repeat;
   background-color: var(--background);
   color: var(--standard-font);
   overflow: hidden;
