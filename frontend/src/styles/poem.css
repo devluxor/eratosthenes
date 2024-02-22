@@ -20,4 +20,5 @@
 
 .poem-numbers {
   color: var(--poem-font);
+  font-size: 0.85rem;
 }
