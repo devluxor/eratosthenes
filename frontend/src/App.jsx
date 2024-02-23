@@ -14,7 +14,7 @@ import { error } from './utils/logger'
 function App() {
   const [primes, setPrimes] = useState([])
   const [median, setMedian] = useState([])
-  const urlMatch = useMatch('/:number/*')
+  const urlMatch = useMatch('/primes/:number/*')
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -35,7 +35,7 @@ function App() {
         `Invalid number: ${number}`
         
         error(errorMessage, urlMatch.params)
-        navigate(validNumber ? `/${number}` : '/')
+        navigate(validNumber ? `/${number}` : '/primes')
         return
       }
 
@@ -53,7 +53,7 @@ function App() {
   const goToRandomNumber = ({noMedian}) => {
     setMedian([])
     setPrimes([])
-    navigate(`/${randomNumber()}/${noMedian ? '' : 'median'}`)
+    navigate(`/primes/${randomNumber()}/${noMedian ? '' : 'median'}`)
   } 
 
   return (
