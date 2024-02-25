@@ -1,0 +1,279 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   RESET
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* General */
+
+:root {
+  --background:black;
+  --standard-font: wheat;
+  --hidden-font:rgb(180, 135, 93);
+  --poem-font:rgb(247, 237, 223);
+}
+
+body {
+  background: url(/src/images/planet.jpg) 0 3% no-repeat;
+  background-color: var(--background);
+  color: var(--standard-font);
+  overflow: hidden;
+  padding: 20px;
+  padding-left: 400px;
+}
+
+#root {
+  display: flex;
+}
+
+.flare {
+  position: absolute;
+  margin-left: -550px;
+  margin-top: -530px;
+  z-index: 9;
+}
+
+.button {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  top: 90px;
+  left: 490px;
+  z-index: 100;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  body {
+    background-position-x: 20%;
+  }
+  .spheres {
+    left: -10px;
+  }
+  .flare {
+    left: 30px;
+  }
+  .button {
+    left: 140px;
+  }
+} 
+
+@media (max-width: 480px) {
+  body {
+    background-position-x: 20%;
+  }
+  .flare {
+    left: -30px;
+  }
+  .button {
+    left: 65px;
+  }
+  .sphere3 {
+    max-width: 350px;
+    max-height: 350px;
+    top: 7vh;
+    left: 10vw;
+  }
+  .sphere2 {
+    max-width: 550px;
+    max-height: 550px;
+    top: 10vh;
+  }
+  .sphere1 {
+    max-width: 750px;
+    max-height: 750px;
+    top: 16vh;
+  }
+
+  .sphere0-primes {
+    max-width: 950px;
+    max-height: 950px;
+    top: 15vh;
+    left: -20vw;
+  }
+
+  .sphere0b-median {
+    left: -30vw;
+  }
+
+  @keyframes sphere-spin-median {
+    from {
+      transform: rotate(-45deg);
+    }
+    to {
+      transform: rotate(120deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .sphere0b-median {
+      animation: sphere-spin-median infinite 25s linear;
+    }
+  }
+}
+
+/* Spheres and Animations */
+
+.spheres {
+  position: absolute;
+}
+
+.sphere {
+  will-change: filter;
+  transition: filter 300ms;
+  position: absolute;
+}
+
+@keyframes sphere-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sphere-spin-median {
+  from {
+    transform: rotate(-120deg);
+  }
+  to {
+    transform: rotate(130deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sphere0-primes {
+    animation: sphere-spin infinite 60s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sphere0b-median {
+    animation: sphere-spin-median infinite 25s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sphere1 {
+    animation: sphere-spin infinite 100s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sphere2 {
+    animation: sphere-spin infinite 160s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sphere3 {
+    animation: sphere-spin infinite 200s linear;
+  }
+}
+
+.sphere3 {
+  height: 35rem;
+
+  z-index: 7;
+}
+
+.sphere2 {
+  height: 50rem;
+
+  z-index: 8;
+
+}
+
+.sphere1 {
+  height: 70rem;  
+
+  z-index: 9;
+}
+
+svg.sphere0-primes {
+  height: 85rem;
+  margin-top: 10vh;
+  margin-left: 4vw;
+  z-index: 10;
+  /* filter: invert(22%) sepia(62%) saturate(650%) hue-rotate(347deg) brightness(60%) contrast(60%); */
+}
+
+svg.sphere0b-median {
+  margin-top: 30vh;
+  margin-left: 13vw;
+  height: 90rem;
+  z-index: 11;
+}
+
+/* Poem */
+
+.poem {
+  position: sticky;
+  font-size: 0.6rem;
+  margin-left: -395px;
+  color:var(--hidden-font);
+  margin-top: -15px;
+  left: 1230px;
+  min-width: min-content;
+  white-space: nowrap;
+  font-family: 'Courier New', Courier, monospace;
+  z-index: 999;
+}
+
+.poem:hover {
+  cursor: pointer;
+  color: var(--poem-font)
+}
+
+.poem-numbers {
+  color: var(--poem-font);
+  font-size: 0.85rem;
+}
