@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react'
-import { primesAndMedian } from './services/pseudoApi'
-import Spheres from './components/Spheres'
+// import { primesAndMedian } from './services/pseudoApi'
+// import Spheres from './components/Spheres'
 import { useMatch, useNavigate } from 'react-router-dom'
-import { randomNumber } from './utils/helpers'
+// import { randomNumber } from './utils/helpers'
 
-import PlotinusSkull from './components/PlotinusSkull'
-import Flare from './components/Flare'
+// import PlotinusSkull from './components/Poem'
+// import Flare from './components/Flare'
 
-import { MAX_NUMBER } from './utils/variables'
-import Button from './components/Button'
-import { error } from './utils/logger'
+import { MAX_NUMBER, randomNumber, error, primesAndMedian } from './js/mini'
+// import Button from './components/Button'
+// import { error } from './utils/logger'
+
+import { Button, Poem, Flare, Spheres } from './components/miniComponents'
 
 function App() {
   const [primes, setPrimes] = useState([])
@@ -58,7 +60,7 @@ function App() {
 
   return (
     <>
-      <PlotinusSkull goToRandomNumber={goToRandomNumber}/>       
+      <Poem goToRandomNumber={goToRandomNumber}/>       
         {/* 
         
 
