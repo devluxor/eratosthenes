@@ -1,8 +1,9 @@
-# React + Vite
+# The Sieve of Eratosthenes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Never stop sculpting your own statue: 
+contemplate the immediate simplicity of the Numbers; 
+try to bring back the god in you 
+to the divine in all
+to flee alone, towards the solitary one. 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Lucas Sorribes, 2024.
