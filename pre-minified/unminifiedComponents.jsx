@@ -81,9 +81,9 @@ export const Spheres = ({primes, median}) => {
     <div className='spheres'>
       <Primes primes={primes}/>
       <Median median={median}/>
-      <img className={'sphere sphere1'} src={sphere1} alt="Sphere of Text 1" />
+      {/* <img className={'sphere sphere1'} src={sphere1} alt="Sphere of Text 1" />
       <img className={'sphere sphere2'} src={sphere2} alt="Sphere of Text 2" />
-      <img className={'sphere sphere3'} src={sphere3} alt="Sphere of Text 3" />
+      <img className={'sphere sphere3'} src={sphere3} alt="Sphere of Text 3" /> */}
     </div>
   )
 }

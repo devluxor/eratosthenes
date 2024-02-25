@@ -1,4 +1,4 @@
-import{useMatch as e}from"react-router-dom";import{medianFormatter as _,primesFormatter as $}from"../js/mini";import t from"../images/flare.png";import r from"../images/sphere1.svg";import o from"../images/sphere2.svg";import s from"../images/sphere3.svg";export const Button=({goToRandomNumber:e})=><div className="button"onClick={e}></div>;export const Flare=()=><img className="flare"src={t}></img>;export const Median=({median:e})=>{if(!(e.length<1))return<svg className={"sphere sphere0b-median"}viewBox="0 0 300 300"xmlns="http://www.w3.org/2000/svg"xmlnsXlink="http://www.w3.org/1999/xlink">
+import{useMatch as e}from"react-router-dom";import{medianFormatter as _,primesFormatter as $}from"../js/mini";import t from"../images/flare.png";export const Button=({goToRandomNumber:e})=><div className="button"onClick={e}></div>;export const Flare=()=><img className="flare"src={t}></img>;export const Median=({median:e})=>{if(!(e.length<1))return<svg className={"sphere sphere0b-median"}viewBox="0 0 300 300"xmlns="http://www.w3.org/2000/svg"xmlnsXlink="http://www.w3.org/1999/xlink">
 
       <path id="SunCatcherStudio"fill="none"d="M 32.550491,148.48008 A -108.15144,-108.15144 0 0 1 140.70194,40.328644 -108.15144,-108.15144 0 0 1 248.85338,148.48008 -108.15144,-108.15144 0 0 1 140.70194,256.63153 -108.15144,-108.15144 0 0 1 32.550491,148.48008 Z"/>  
 
@@ -32,10 +32,22 @@ import{useMatch as e}from"react-router-dom";import{medianFormatter as _,primesFo
 
       <Median median={_}/>
 
-      <img className={"sphere sphere1"}src={r}alt="Sphere of Text 1"/>
+      <svg alt="Sphere of Text 1" className={'sphere sphere1'} viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <path id="SunCatcherStudio" fill="none" d="M 32.550491,148.48008 A -108.15144,-108.15144 0 0 1 140.70194,40.328644 -108.15144,-108.15144 0 0 1 248.85338,148.48008 -108.15144,-108.15144 0 0 1 140.70194,256.63153 -108.15144,-108.15144 0 0 1 32.550491,148.48008 Z" />  
+        <text fontSize="17" fill="#332612" letterSpacing="2.7" fontFamily="serif" fontWeight="normal">
+        <textPath xlinkHref="#SunCatcherStudio" startOffset="5">Eratosthenes of Cyrene (276 BC - c. 195 BC) was a Greek polymath...</textPath></text>
+      </svg>
 
-      <img className={"sphere sphere2"}src={o}alt="Sphere of Text 2"/>
+      <svg alt="Sphere of Text 2" className={'sphere sphere2'} viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <path id="SunCatcherStudio" fill="none" d="M 32.550491,148.48008 A -108.15144,-108.15144 0 0 1 140.70194,40.328644 -108.15144,-108.15144 0 0 1 248.85338,148.48008 -108.15144,-108.15144 0 0 1 140.70194,256.63153 -108.15144,-108.15144 0 0 1 32.550491,148.48008 Z" />  
+        <text fontSize="14" fill="#2b240f" letterSpacing="3" fontFamily="serif" fontWeight="normal">
+        <textPath xlinkHref="#SunCatcherStudio" startOffset="5">...a mathematician, geographer, poet, astronomer, and music theorist. He was a...</textPath></text>
+      </svg>
 
-      <img className={"sphere sphere3"}src={s}alt="Sphere of Text 3"/>
+      <svg alt="Sphere of Text 3" className={'sphere sphere3'} viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <path id="SunCatcherStudio" fill="none" d="M 32.550491,148.48008 A -108.15144,-108.15144 0 0 1 140.70194,40.328644 -108.15144,-108.15144 0 0 1 248.85338,148.48008 -108.15144,-108.15144 0 0 1 140.70194,256.63153 -108.15144,-108.15144 0 0 1 32.550491,148.48008 Z" />  
+        <text fontSize="13" fill="#3b3012" letterSpacing="0" fontFamily="serif" fontWeight="normal">
+        <textPath xlinkHref="#SunCatcherStudio" startOffset="5">...of learning, becoming the chief librarian at the Library of Alexandria, and the first to calculate the circumference of the Earth...</textPath></text>
+      </svg>
 
     </div>;
